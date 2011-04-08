@@ -67,7 +67,7 @@ module JqueryValidator
 
   class ConfirmationValidator < JqueryValidator::Base
     def validate_attribute(field_name)
-      { :rules => { field_name.gsub(/]/, '_confirmation]') =>  {:equalTo => '#' + field_name.slice(0..field_name.length-2).gsub(/\[/, '_')}} }
+      { :rules => { field_name.gsub(']', '_confirmation]') =>  {:equalTo => '#' + field_name.slice(0..field_name.length-2).gsub(']', '_')}} }
     end
   end
   
