@@ -1,0 +1,16 @@
+2/14/2011 Changes by Peter Ehrlich
+
+ - Added rspec testing code for many (but not all) vaalidators
+ - Added support for one validator with multiple fields (attributes)
+ - The :only parameter can now take a symbol as well as an array
+ - It now correctly figures out the form name for forms named with the :as parameter.  (Devise is good example)
+ - Added support for the :if and :unless validator options
+ - Added support for the :message validator option
+
+TODO:
+ - readme update (should I do this?)
+
+Several things are incomplete and still need work:
+ - Finish test code and add cucumber testing
+ - Add support for :on option.  This would require somewhat involved coding, as where the rails validators determine on create or or update, this would need to detect new and edit instead.
+ - There appear to be issues with the inclusion/exclusion validator
